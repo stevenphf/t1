@@ -12,3 +12,9 @@ for line in lines:
         x_train.shape = -1, 28
         cv2.imwrite("temp.jpg", x_train)
         img = cv2.imread("temp.jpg")
+
+        cv2.imshow("line" + str(line) + '-' + str(y_label), img)
+        cv2.waitKey()
+        cv2.destroyAllWindows()
+    else:
+        print('line为'+line+'，忽略！要求>=2。')
